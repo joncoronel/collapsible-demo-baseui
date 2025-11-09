@@ -7,10 +7,10 @@ import React from "react";
 import { useTheme } from "next-themes";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
-  Notification01DuotoneRounded,
-  Sun01DuotoneRounded,
-  Moon01DuotoneRounded,
-} from "@hugeicons-pro/core-duotone-rounded";
+  Notification01StrokeRounded,
+  Sun01StrokeRounded,
+  Moon01StrokeRounded,
+} from "@hugeicons-pro/core-stroke-rounded";
 
 export default function CollapsibleDemo() {
   const [mounted, setMounted] = React.useState(false);
@@ -29,9 +29,9 @@ export default function CollapsibleDemo() {
           aria-label="Toggle theme"
         >
           {theme === "dark" ? (
-            <HugeiconsIcon icon={Sun01DuotoneRounded} className="size-4" />
+            <HugeiconsIcon icon={Sun01StrokeRounded} className="size-4" />
           ) : (
-            <HugeiconsIcon icon={Moon01DuotoneRounded} className="size-4" />
+            <HugeiconsIcon icon={Moon01StrokeRounded} className="size-4" />
           )}
         </button>
       )}
@@ -42,8 +42,8 @@ export default function CollapsibleDemo() {
             <div className=" bg-linear-to-br from-accent via-muted to-accent rounded-md">
               <div className="flex items-center justify-center p-2 bg-muted border border-transparent bg-clip-padding rounded-md">
                 <HugeiconsIcon
-                  icon={Notification01DuotoneRounded}
-                  className="size-6 drop-shadow-md "
+                  icon={Notification01StrokeRounded}
+                  className="size-6 drop-shadow-sm fill-card text-border"
                 />
               </div>
             </div>
