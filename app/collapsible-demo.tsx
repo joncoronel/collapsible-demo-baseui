@@ -48,9 +48,9 @@ export default function CollapsibleDemo() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-1 items-start">
+              <div className="flex flex-col gap-1 items-start transition-all duration-300 ease-out-cubic group-data-panel-open/collapsible-trigger:justify-center group-data-panel-open/collapsible-trigger:gap-0">
                 <p className="text-sm font-medium">Notifications</p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-300 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-2 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-2 [interpolate-size:allow-keywords]">
                   You have 1 new notification
                 </p>
               </div>
