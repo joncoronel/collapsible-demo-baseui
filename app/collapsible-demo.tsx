@@ -38,16 +38,16 @@ export default function CollapsibleDemo() {
 
       <Collapsible.Root className="group/collapsible rounded-2xl shadow-sm w-full max-w-xs border border-border/70 overflow-hidden">
         <Collapsible.Trigger className="group/collapsible-trigger flex w-full">
-          <div className="flex items-center gap-2 px-3 py-2.5 w-full justify-between">
+          <div className="flex items-center gap-2 p-3 w-full justify-between ">
             <div className=" bg-linear-to-br from-accent via-muted to-accent rounded-md">
               <div className="flex items-center justify-center p-2 bg-muted border border-transparent bg-clip-padding rounded-md">
                 <HugeiconsIcon
                   icon={Notification01StrokeRounded}
-                  className="size-6 drop-shadow-sm fill-card text-border"
+                  className="size-6 drop-shadow-sm fill-card text-accent group-data-panel-open/collapsible-trigger:size-4 transition-all duration-300 ease-out-cubic"
                 />
               </div>
             </div>
-            <ChevronRight className="size-4 transition-transform duration-200 ease-out group-data-panel-open/collapsible-trigger:rotate-90" />
+            <ChevronRight className="size-4 transition-transform duration-300 ease-out-cubic group-data-panel-open/collapsible-trigger:rotate-90" />
           </div>
         </Collapsible.Trigger>
         <Collapsible.Panel className=" h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-250 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0">
