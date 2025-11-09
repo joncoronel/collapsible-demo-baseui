@@ -14,6 +14,9 @@ importers:
       '@hugeicons-pro/core-duotone-rounded':
         specifier: ^1.2.1
         version: 1.2.1
+      '@hugeicons-pro/core-solid-rounded':
+        specifier: ^1.2.1
+        version: 1.2.1
       '@hugeicons-pro/core-stroke-rounded':
         specifier: ^1.2.1
         version: 1.2.1
@@ -223,6 +226,9 @@ packages:
 
   '@hugeicons-pro/core-duotone-rounded@1.2.1':
     resolution: {integrity: sha512-ABJ1efDEncctrv6cZdwPUt6gZLUvVb3/XL6v1FaZJzyZBi8dKW+uSRoTK2KMcid0VCvTjQKbryWH7d2L5w88og==}
+
+  '@hugeicons-pro/core-solid-rounded@1.2.1':
+    resolution: {integrity: sha512-95G7Hi7p9U89buXnCPufkqJMg2meeclC1kypKgSjsX6Vnzuroa7cRxCPinCI8Qlh2BsPkydco9rXVRkPwDxHEQ==}
 
   '@hugeicons-pro/core-stroke-rounded@1.2.1':
     resolution: {integrity: sha512-ZPusdsQ9xrIVzQwl37CiFbutVQ7tLOS9B8i+lFtpKak3S6Jwdit7hmVwqbEuzDN2ly1hYD5WGPii0aJ4n+fZtQ==}
@@ -2213,6 +2219,8 @@ snapshots:
   '@floating-ui/utils@0.2.10': {}
 
   '@hugeicons-pro/core-duotone-rounded@1.2.1': {}
+
+  '@hugeicons-pro/core-solid-rounded@1.2.1': {}
 
   '@hugeicons-pro/core-stroke-rounded@1.2.1': {}
 

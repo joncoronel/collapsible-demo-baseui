@@ -18,6 +18,8 @@ import {
   CircleArrowDown01StrokeRounded,
 } from "@hugeicons-pro/core-stroke-rounded";
 
+import { CircleArrowDown01SolidRounded } from "@hugeicons-pro/core-solid-rounded";
+
 const notifications = [
   {
     id: 1,
@@ -60,7 +62,7 @@ export default function CollapsibleDemo() {
   }, []);
 
   return (
-    <div className="bg-background flex h-screen flex-col items-center justify-center">
+    <div className="bg-background dark:bg-muted flex h-screen flex-col items-center justify-center">
       {mounted && (
         <button
           onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -75,35 +77,40 @@ export default function CollapsibleDemo() {
         </button>
       )}
 
-      <Collapsible.Root className="group/collapsible rounded-2xl shadow-lg w-full max-w-xs border border-border/70 overflow-hidden">
-        <Collapsible.Trigger className="group/collapsible-trigger flex w-full">
+      <Collapsible.Root className="group/collapsible rounded-2xl shadow-lg w-full max-w-xs border border-border/70 overflow-hidden bg-card">
+        <Collapsible.Trigger className="group/collapsible-trigger flex w-full cursor-pointer">
           <div className="flex items-center gap-2 p-2.5 w-full justify-between ">
             <div className="flex items-center flex-row gap-4">
               <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
-                <div className="flex items-center justify-center p-2 group-data-panel-open/collapsible-trigger:p-1.5 transition-all duration-400 ease-out-cubic bg-muted border border-transparent bg-clip-padding rounded-md">
+                <div className="flex items-center justify-center p-2 group-data-panel-open/collapsible-trigger:p-1.5 transition-all duration-400 ease-out-cubic bg-muted border border-transparent bg-clip-padding rounded-md ">
                   <HugeiconsIcon
                     icon={Notification01StrokeRounded}
                     className="size-8 drop-shadow-sm fill-card text-border group-data-panel-open/collapsible-trigger:size-5 transition-all duration-400 ease-out-cubic"
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-1 items-start transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:justify-center group-data-panel-open/collapsible-trigger:gap-0">
-                <p className="text-sm font-medium">5 New Activities</p>
-                <p className="text-xs text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-2 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-2 [interpolate-size:allow-keywords]">
+              <div className="flex flex-col  items-start transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:justify-center group-data-panel-open/collapsible-trigger:gap-0">
+                <p className="text-md font-semibold group-data-panel-open/collapsible-trigger:text-sm transition-all duration-400 ease-out-cubic">
+                  5 New Activities
+                </p>
+                <p className="text-sm text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-4 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-4 [interpolate-size:allow-keywords]">
                   What's happening around you
                 </p>
               </div>
             </div>
             <HugeiconsIcon
-              icon={CircleArrowDown01StrokeRounded}
+              icon={CircleArrowDown01SolidRounded}
               className="size-6 transition-transform duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:rotate-180 text-border"
             />
           </div>
         </Collapsible.Trigger>
         <Collapsible.Panel className="group/collapsible-panel h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-400 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0">
-          <div className="flex flex-col border-t bg-card space-y-4 p-3">
+          <div className="flex flex-col border-t bg-card  p-2.5 gap-2.5">
             {notifications.map((notification) => (
-              <div className="flex flex-row" key={notification.id}>
+              <div
+                className="flex flex-row items-center gap-4"
+                key={notification.id}
+              >
                 <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
                   <div className="flex items-center justify-center p-1.5 bg-muted border border-transparent bg-clip-padding rounded-md">
                     <HugeiconsIcon
@@ -112,9 +119,13 @@ export default function CollapsibleDemo() {
                     />
                   </div>
                 </div>
-                <div>
-                  <div></div>
-                  <div></div>
+                <div className="flex flex-col gap-0 items-start">
+                  <div className="text-sm font-medium">
+                    {notification.title}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {notification.description}
+                  </div>
                 </div>
               </div>
             ))}
