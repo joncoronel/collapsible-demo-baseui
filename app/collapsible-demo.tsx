@@ -98,7 +98,7 @@ export default function CollapsibleDemo() {
                 <p className="text-md font-semibold group-data-panel-open/collapsible-trigger:text-sm transition-all duration-400 ease-out-cubic">
                   5 New Activities
                 </p>
-                <p className="text-sm text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-4 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-4 [interpolate-size:allow-keywords]">
+                <p className="text-sm text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-2 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-2 [interpolate-size:allow-keywords]">
                   What's happening around you
                 </p>
               </div>
