@@ -77,7 +77,7 @@ export default function CollapsibleDemo() {
         </button>
       )}
 
-      <Collapsible.Root className="group/collapsible rounded-2xl shadow-lg w-full max-w-xs border border-border/70 overflow-hidden bg-card">
+      <Collapsible.Root className="group/collapsible rounded-2xl shadow-lg w-full max-w-[22rem] border border-border/70 overflow-hidden bg-card">
         <Collapsible.Trigger className="group/collapsible-trigger flex w-full cursor-pointer">
           <div className="flex items-center gap-2 p-2.5 w-full justify-between ">
             <div className="flex items-center flex-row gap-4">
