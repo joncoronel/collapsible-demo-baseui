@@ -36,7 +36,7 @@ export default function CollapsibleDemo() {
         </button>
       )}
 
-      <Collapsible.Root className="group/collapsible rounded-lg shadow-sm w-full max-w-xs border border-border/70 overflow-hidden">
+      <Collapsible.Root className="group/collapsible rounded-2xl shadow-sm w-full max-w-xs border border-border/70 overflow-hidden">
         <Collapsible.Trigger className="group/collapsible-trigger flex w-full">
           <div className="flex items-center gap-2 px-3 py-2.5 w-full justify-between">
             <div className=" bg-linear-to-br from-accent via-muted to-accent rounded-md">
