@@ -39,12 +39,20 @@ export default function CollapsibleDemo() {
       <Collapsible.Root className="group/collapsible rounded-2xl shadow-sm w-full max-w-xs border border-border/70 overflow-hidden">
         <Collapsible.Trigger className="group/collapsible-trigger flex w-full">
           <div className="flex items-center gap-2 p-3 w-full justify-between ">
-            <div className=" bg-linear-to-br from-accent via-muted to-accent rounded-md">
-              <div className="flex items-center justify-center p-2 bg-muted border border-transparent bg-clip-padding rounded-md">
-                <HugeiconsIcon
-                  icon={Notification01StrokeRounded}
-                  className="size-6 drop-shadow-sm fill-card text-accent group-data-panel-open/collapsible-trigger:size-4 transition-all duration-300 ease-out-cubic"
-                />
+            <div className="flex items-center flex-row gap-4">
+              <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
+                <div className="flex items-center justify-center p-2 bg-muted border border-transparent bg-clip-padding rounded-md">
+                  <HugeiconsIcon
+                    icon={Notification01StrokeRounded}
+                    className="size-6 drop-shadow-sm fill-card text-accent group-data-panel-open/collapsible-trigger:size-4 transition-all duration-300 ease-out-cubic"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col gap-1 items-start">
+                <p className="text-sm font-medium">Notifications</p>
+                <p className="text-xs text-muted-foreground">
+                  You have 1 new notification
+                </p>
               </div>
             </div>
             <ChevronRight className="size-4 transition-transform duration-300 ease-out-cubic group-data-panel-open/collapsible-trigger:rotate-90" />
