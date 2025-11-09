@@ -85,7 +85,7 @@ export default function CollapsibleDemo() {
       <Collapsible.Root className="group/collapsible rounded-2xl shadow-lg w-full max-w-[22rem] border border-border/70 overflow-hidden bg-card">
         <Collapsible.Trigger className="group/collapsible-trigger flex w-full cursor-pointer">
           <div className="flex items-center gap-2 p-2.5 w-full justify-between ">
-            <div className="flex items-center flex-row gap-4">
+            <div className="flex items-center flex-row gap-3">
               <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
                 <div className="flex items-center justify-center p-2 group-data-panel-open/collapsible-trigger:p-1.5 transition-all duration-400 ease-out-cubic bg-muted border border-transparent bg-clip-padding rounded-md ">
                   <HugeiconsIcon
@@ -121,7 +121,7 @@ export default function CollapsibleDemo() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col gap-0 items-start ml-4">
+                <div className="flex flex-col gap-0 items-start ml-3">
                   <div className="text-sm font-medium">
                     {notification.title}
                   </div>

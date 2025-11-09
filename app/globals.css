@@ -70,8 +70,8 @@ html {
 
 @theme inline {
   /* Fonts */
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
   --font-asap: var(--font-asap);
 
   /* Colors */
