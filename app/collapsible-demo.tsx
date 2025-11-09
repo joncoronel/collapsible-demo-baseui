@@ -26,30 +26,35 @@ const notifications = [
     title: "New Message!",
     description: "Sarah sent you a message.",
     icon: Message01StrokeRounded,
+    timestamp: "Just Now",
   },
   {
     id: 2,
     title: "Level Up!",
     description: "You've unlocked a new achievement.",
     icon: CheckmarkBadge01StrokeRounded,
+    timestamp: "2 min ago",
   },
   {
     id: 3,
     title: "Reminder: Meeting Today",
     description: "Your team meeting starts in 30 minutes.",
     icon: Clock02StrokeRounded,
+    timestamp: "3 hours ago",
   },
   {
     id: 4,
     title: "Special Offer!",
     description: "Save 20% off on subscription upgrade.",
     icon: DiscountTag01Icon,
+    timestamp: "12 hours ago",
   },
   {
     id: 5,
     title: "New Feature!",
     description: "You've unlocked a new feature.",
     icon: CheckmarkCircle01StrokeRounded,
+    timestamp: "Yesterday",
   },
 ];
 
@@ -107,10 +112,7 @@ export default function CollapsibleDemo() {
         <Collapsible.Panel className="group/collapsible-panel h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-400 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0">
           <div className="flex flex-col border-t bg-card  p-2.5 gap-2.5">
             {notifications.map((notification) => (
-              <div
-                className="flex flex-row items-center gap-4"
-                key={notification.id}
-              >
+              <div className="flex flex-row items-center" key={notification.id}>
                 <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
                   <div className="flex items-center justify-center p-1.5 bg-muted border border-transparent bg-clip-padding rounded-md">
                     <HugeiconsIcon
@@ -119,13 +121,16 @@ export default function CollapsibleDemo() {
                     />
                   </div>
                 </div>
-                <div className="flex flex-col gap-0 items-start">
+                <div className="flex flex-col gap-0 items-start ml-4">
                   <div className="text-sm font-medium">
                     {notification.title}
                   </div>
                   <div className="text-xs text-muted-foreground">
                     {notification.description}
                   </div>
+                </div>
+                <div className="text-xs text-muted-foreground ml-auto self-start whitespace-nowrap">
+                  {notification.timestamp}
                 </div>
               </div>
             ))}
