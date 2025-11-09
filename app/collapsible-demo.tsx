@@ -95,9 +95,9 @@ export default function CollapsibleDemo() {
                 </div>
               </div>
               <div className="flex flex-col  items-start transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:justify-center group-data-panel-open/collapsible-trigger:gap-0">
-                <p className="text-md font-semibold group-data-panel-open/collapsible-trigger:text-sm transition-all duration-400 ease-out-cubic">
+                <h2 className="text-md font-semibold group-data-panel-open/collapsible-trigger:text-sm transition-all duration-400 ease-out-cubic">
                   5 New Activities
-                </p>
+                </h2>
                 <p className="text-sm text-muted-foreground h-auto overflow-hidden transition-discrete transition-all duration-400 ease-out-cubic group-data-panel-open/collapsible-trigger:opacity-0 group-data-panel-open/collapsible-trigger:h-0 group-data-panel-open/collapsible-trigger:-translate-y-2 group-data-panel-open/collapsible-trigger:hidden starting:opacity-0 starting:h-0 starting:-translate-y-2 [interpolate-size:allow-keywords]">
                   What's happening around you
                 </p>
@@ -113,9 +113,9 @@ export default function CollapsibleDemo() {
           hiddenUntilFound
           className="group/collapsible-panel h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-400 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0 data-starting-style:blur-xs data-ending-style:blur-xs"
         >
-          <div className="flex flex-col border-t bg-card  p-2.5 gap-2.5">
+          <ul className="flex flex-col border-t bg-card  p-2.5 gap-2.5">
             {notifications.map((notification) => (
-              <div className="flex flex-row items-center" key={notification.id}>
+              <li className="flex flex-row items-center" key={notification.id}>
                 <div className="h-fit bg-linear-to-br from-accent via-muted to-accent rounded-md">
                   <div className="flex items-center justify-center p-1.5 bg-muted border border-transparent bg-clip-padding rounded-md">
                     <HugeiconsIcon
@@ -135,9 +135,9 @@ export default function CollapsibleDemo() {
                 <div className="text-xs text-muted-foreground ml-auto self-start whitespace-nowrap">
                   {notification.timestamp}
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ul>
         </Collapsible.Panel>
       </Collapsible.Root>
     </div>
