@@ -109,7 +109,10 @@ export default function CollapsibleDemo() {
             />
           </div>
         </Collapsible.Trigger>
-        <Collapsible.Panel className="group/collapsible-panel h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-400 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0">
+        <Collapsible.Panel
+          hiddenUntilFound
+          className="group/collapsible-panel h-(--collapsible-panel-height)   overflow-hidden text-sm transition-all ease-out-cubic duration-400 data-ending-style:h-0 data-starting-style:h-0 data-ending-style:opacity-0 data-starting-style:opacity-0 data-starting-style:blur-xs data-ending-style:blur-xs"
+        >
           <div className="flex flex-col border-t bg-card  p-2.5 gap-2.5">
             {notifications.map((notification) => (
               <div className="flex flex-row items-center" key={notification.id}>
